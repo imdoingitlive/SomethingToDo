@@ -40,9 +40,7 @@ nav li a {
 	background: #43b29d;
 }*/
 
-#screen1	{
-	height: 100vh;
-}
+
 
 #screen2 {
 	background: #efc94d;
@@ -91,11 +89,14 @@ nav li a {
 	margin: 1px !important;
 	background-color: #808000 !important;
 	color: #fff !important;
-	height: 120px !important;
+	height: 125px !important;
 }
 
 .seg-user-style	{
 	width: 20px !important;
 }
+
+
+
 
 
