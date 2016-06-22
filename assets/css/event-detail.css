@@ -1,0 +1,16 @@
+.event-detail-img {
+	width: 150px;
+	height: 100px;
+	margin: 0 0 10px;
+}
+
+#event-content {
+	float: right;
+}
+
+.ui.accordion {
+/*
+	max-width: 50%;
+	margin: 20px;
+*/
+}
