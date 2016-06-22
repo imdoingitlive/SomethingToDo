@@ -1,0 +1,47 @@
+@media only screen and (max-width: 520px) {
+
+	nav li {
+		padding: 24px 4px;
+	}
+
+	nav li a {
+		font-size: 14px;
+	}
+}
+
+* {margin: 0; padding: 0;}
+
+a {text-decoration: none;}
+
+body {
+	color: #fff;
+	text-align: center;
+}
+
+nav {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 60px;
+	background: #fff;
+}
+
+.std-style	{
+	text-align: center;
+	position: absolute;
+	margin-top: 250px;
+	margin-left: 450px;
+	width: 100px;
+	height: 20px;
+	color: #ff8c00;
+	font-family: 'Shadows Into Light', cursive;
+	font-size: 100px;
+}
+
+#locationSearch {
+	position: absolute;
+    left: 0;
+    top: 75%;
+    width: 100%;
+    z-index: 2;
+}
