@@ -97,7 +97,6 @@
 
 		var imageDiv = $('<img>');
 		imageDiv.addClass('image');
-	//	imageDiv.addClass('ui segment');
 		imageDiv.addClass('event-detail-img');
 
 		// Search for the image where the following keys are found:
@@ -148,7 +147,10 @@
 		titleDiv.append(iconDiv);
 		titleDiv.append(venue.name);
 
-		innerContentDiv.append(venue.city.name + ", " + venue.state.stateCode);
+		innerContentDiv.append(venue.address.line1 + "<br>");
+		innerContentDiv.append(venue.city.name + ", " + 
+								venue.state.stateCode + ", " +
+								venue.postalCode);
 
 		var url = '<a href="' + venue.url + '">More Info...</a>';
 		innerContentDiv.append("<br>" + url);
@@ -162,9 +164,8 @@
 	}
 
 	function displayDate(event) {
-
-		var date = moment(event.dates.start.dateTime).format("MM/DD/YY hh:mm A");
-		var saleDate = moment(event.sales.public.startDateTime).format("MM/DD/YY hh:mm A");
+		var date = moment(event.dates.start.dateTime).format("MMMM Do YYYY, h:mm A");
+		var saleDate = moment(event.sales.public.startDateTime).format("MMMM Do YYYY, h:mm A");
 
 		date = "<p>Event Date: " + date + "</p>";
 		saleDate = "<p>On Sale Starting: " + saleDate + "</p>";
