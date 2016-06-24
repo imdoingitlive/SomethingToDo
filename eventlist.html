@@ -37,18 +37,18 @@
             <nav>
                 <div class="nav-left-style">
                     <div class="ui action input">
-                    <input type="text" placeholder="City or Zipcode">
-                    <button class="ui icon button">
-                        <i class="search icon"></i>
-                    </button>
+                        <input type="text" placeholder="City or Zipcode" class="city-zipcode">
+                        <button class="ui icon button city-zipcode-btn">
+                            <i class="search icon"></i>
+                        </button>
                     </div>
                 </div>
                 <div class="nav-right-style">
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Team</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a class="myAboutClick">About</a></li>
+                        <li><a class="myTeamClick">Team</a></li>
+                        <li><a class="myContactClick">Contact</a></li>
                     </ul>
                 </div>
             </nav>
@@ -72,6 +72,77 @@
                 </div>
             </div>
         </section>
+
+        <!-- About Modal -->
+        <div class="ui small modal custom-about">
+            <i class="close icon"></i>
+            <div class="header">
+                About SomethingToDo
+            </div>
+            <div class="image content">
+                <div class="ui medium image">
+                    <img src="assets/images/eventimg3.jpg">
+                </div>
+                <div class="description">
+                    <p>SomethingToDo helps user to get event details for the day based on City or ZipCode.</p>
+                </div>
+            </div>
+            <div class="actions">
+                <div class="ui positive button">
+                    Ok 
+                </div>
+            </div>
+        </div>
+
+        <!-- Team Modal -->
+        <div class="ui small modal custom-team">
+            <i class="close icon"></i>
+            <div class="header">
+                The Awesome Team
+            </div>
+            <div class="image content">
+                <div class="ui medium image">
+                    <img src="assets/images/eventimg4.png">
+                </div>
+                <div class="description">
+                    <p class="txt-sytle">Anand</p>
+                    <p class="txt-sytle">Edwin</p>
+                    <p class="txt-sytle">Stefanie</p>
+                    <p>(Not in any particular order)</p>
+                </div>
+            </div>
+            <div class="actions">
+                <div class="ui positive button">
+                    Ok 
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Modal -->
+        <div class="ui basic modal">
+            <i class="close icon"></i>
+            <div class="header">
+                Contact
+            </div>
+            <div class="image content">
+                <div class="ui medium image">
+                    <img src="assets/images/eventimg4.png">
+                </div>
+                <div class="description">
+                    <p class="txt-sytle2">Rutgers Coding Bootcamp</p>
+                    <p class="txt-sytle2">Phone: XXX-XXX-XXXX</p>
+                    <p class="txt-sytle2">Email: code@rutgers.edu</p>
+                </div>
+            </div>
+            <div class="actions">
+                <div class="ui positive button">
+                    Ok 
+                </div>
+            </div>
+        </div>
+
+        <!-- Issue Modal -->
+
 
         <!-- Footer -->
         <footer>

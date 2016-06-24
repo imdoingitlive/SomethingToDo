@@ -10,8 +10,7 @@ a {text-decoration: none;}
 }
 
 body {
-	color: #fff;
-	text-align: center;
+	background-color: #efc94d !important;
 }
 
 nav {
@@ -19,7 +18,7 @@ nav {
 	bottom: 0;
 	width: 100%;
 	height: 60px;
-	background: #fff;
+	background: #ff8c00;
 }
 
 nav li {
@@ -28,25 +27,14 @@ nav li {
 }
 
 nav li a {
-	color: #757575;
+	color: #fff;
 	text-transform: uppercase;
+	cursor: pointer;
 }
 
-/*section {
-	height: 100vh;
-}*/
-
-/*#screen1 {	
-	background: #43b29d;
-}*/
 
 
-
-#screen2 {
-	background: #efc94d;
-}
-
-@media only screen and (max-width: 520px) {
+/*@media only screen and (max-width: 520px) {
 
 	nav li {
 		padding: 24px 4px;
@@ -56,18 +44,17 @@ nav li a {
 		font-size: 14px;
 	}
 
-}
+}*/
 
 .std-style	{
-	text-align: center;
 	position: absolute;
-	margin-top: 250px;
-	margin-left: 450px;
+	margin-top: 255px;
+	margin-left: 370px;
 	width: 100px;
 	height: 20px;
 	color: #ff8c00;
 	font-family: 'Shadows Into Light', cursive;
-	font-size: 100px;
+	font-size: 120px;
 }
 
 .nav-right-style	{
@@ -82,7 +69,7 @@ nav li a {
 }
 
 .event-display	{
-	margin-top: 15px;
+	margin-top: 25px;
 }
 
 .col-style {
@@ -90,13 +77,20 @@ nav li a {
 	background-color: #808000 !important;
 	color: #fff !important;
 	height: 125px !important;
+	cursor: pointer;
 }
 
 .seg-user-style	{
 	width: 20px !important;
+	text-align: center !important;
 }
 
+.txt-sytle	{
+	color: #800000;
+	font-size: 25px;
+}
 
-
-
-
+.txt-sytle2	{
+	color: #fff;
+	font-size: 25px;
+}

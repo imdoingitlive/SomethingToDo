@@ -42,7 +42,7 @@
 	}
 
 	// Function to create Ticket Master query URL
-	function getAPIQuery()	{
+	function getAPIQuery(fparmCity, fparmPostalCode)	{
 
 		// Local variables
 		var apiQuery = "";
@@ -54,6 +54,14 @@
 		startDateTime = $_GET("startDateTime");
 		city	= $_GET("city");
 		postalCode = $_GET("postalCode");
+
+		if (fparmCity !== null)	{
+			city = fparmCity;
+		}
+
+		if (fparmPostalCode!== null)	{
+			postalCode = fparmPostalCode;
+		}
 
 		// If postal code is not null then use postal code
 		if ( postalCode !== null )	{
@@ -69,10 +77,11 @@
 		return apiQuery;
 	}
 
-	function createEventListing()	{
+	// Function to display event listing
+	function createEventListing(fparmAPIURL)	{
 		
 		// Function call to get API query
-		var apiURL = getAPIQuery();
+		var apiURL = fparmAPIURL;
 
 		// Remove child elements
 		$(".event-list").empty();
@@ -86,6 +95,7 @@
             
             // Get the data from response object
             var results = response._embedded;
+
             
             // Loop through object
             for (var j = 0; j < results.events.length; j++) {
@@ -119,12 +129,12 @@
                 // Add class 
                 eventSegmentsDiv.addClass('click-event');
 
-                // Append p objects to div object
+                // Append p object to div object
                 eventSegmentPDiv.append(pEventText);
-                eventSegmentPDiv.append(pEventSegment);
 
-                // Append img object to div object
+                // Append img and p object to div object
                 eventSegmentImgDiv.append(eventImage);
+                eventSegmentImgDiv.append(pEventSegment);
 
                 // Append Segments
                 eventSegmentsDiv.append(eventSegmentImgDiv);
@@ -138,7 +148,55 @@
 
         });
 
+        return false;
+
 	}
+
+	// When enter key is pressed in the search bar
+	$(".city-zipcode").keyup(function (e) {
+    	if (e.keyCode == 13) {
+
+    		// Check if value is not blank
+	        if ($(".city-zipcode").val() !== "")	{
+
+	    		var enteredValue = "";
+
+	    		// If five digit zip code
+	    		if (isValidZip = /(^\d{5}$)|(^\d{5}-\d{4}$)/.test($(".city-zipcode").val()))	{
+	    			enteredValue = $(".city-zipcode").val();
+	    			createEventListing(getAPIQuery(null, enteredValue));
+	    		}	
+
+	    		// If city is entered
+	    		else {
+	    			enteredValue = $(".city-zipcode").val().replace(" ","%20");
+	    			createEventListing(getAPIQuery(enteredValue, null));
+	    		}
+	        }
+    	}	
+	});
+
+	// If button in search bar is clicked
+	$(document.body).on('click','.city-zipcode-btn', function(){
+    	
+		// Check if value is not blank
+    	if ($(".city-zipcode").val() !== "")  {
+
+    		var enteredValue = "";
+
+    		// If five digit zip code
+    		if (isValidZip = /(^\d{5}$)|(^\d{5}-\d{4}$)/.test($(".city-zipcode").val()))	{
+    			enteredValue = $(".city-zipcode").val();
+    			createEventListing(getAPIQuery(null, enteredValue));
+    		}
+
+    		// If city is entered	
+    		else {
+    			enteredValue = $(".city-zipcode").val().replace(" ","%20");
+    			createEventListing(getAPIQuery(enteredValue, null));
+    		}
+	    }
+   	});
 
 	// When individual event listing is clicked
 	$(document.body).on('click','.click-event', function(){
@@ -151,6 +209,33 @@
     });
 
 	// Load event listing
-	createEventListing();
+	createEventListing(getAPIQuery(null, null));
+
+	// When About button is click, open modal window
+	$(document.body).on('click','.myAboutClick', function(){
+
+		$('.ui.small.modal.custom-about')
+  			.modal('show')
+		;
+
+	});
+
+	// When Team button is click, open modal window
+	$(document.body).on('click','.myTeamClick', function(){
+
+		$('.ui.small.modal.custom-team')
+  			.modal('show')
+		;
+
+	});
+
+	// When Contact button is click, open modal window
+	$(document.body).on('click','.myContactClick', function(){
+
+		$('.ui.basic.modal')
+  			.modal('show')
+		;
+
+	});
 
 })();
