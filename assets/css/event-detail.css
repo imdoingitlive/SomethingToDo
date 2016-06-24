@@ -1,13 +1,20 @@
 .event-detail-img {
-	width: 150px;
+	width: 200px;
 	height: 100px;
-	margin: 0 0 10px;
+	margin: 10px 0 15px;
 }
 
 #event-content {
-	float: right;
+	/*float: right;*/
 }
 
+#left-column {
+	margin: 0 0 0 25px;
+}
+
+.restaurant-img {
+	margin: 0 0 15px;
+}
 .ui.accordion {
 /*
 	max-width: 50%;
