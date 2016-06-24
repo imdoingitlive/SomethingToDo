@@ -96,56 +96,67 @@
             // Get the data from response object
             var results = response._embedded;
 
-            
-            // Loop through object
-            for (var j = 0; j < results.events.length; j++) {
+            // If no event resulting is returned
+            if (results == null) { 
 
-                // Create div jquery objects
-                var eventColDiv = $('<div class="column">');
-                var eventSegmentsDiv = $('<div class="ui horizontal segments col-style">');
-                var eventSegmentImgDiv = $('<div class="ui segment seg-user-style">');
-                var eventSegmentPDiv = $('<div class="ui segment seg-user-style">');
-
-                // Create p jquery objects
-                var pEventText = $('<p>').text(results.events[j].name);
-                var pEventSegment = $('<p>').text(results.events[j].classifications[0].segment.name);
-
-                // Get image array
-                var imgs = results.events[j].images;
-                var eventImage;
-                   
-                // Loop through image array and get the image URL for ratio: 16_9, width: 640, height: 360
-                for (var i = 0; i < imgs.length; i++) {
-                    if ( imgs[i].ratio == "16_9" && imgs[i].width == 640 && imgs[i].height == 360 )  {
-                    	
-                    	// Create image jquery object
-                    	eventImage = $('<img class="ui small image">').attr('src', imgs[i].url);
-                    }
-                }
-
-                // Add data attribute
-                eventSegmentsDiv.attr('data-eventid', results.events[j].id);
-
-                // Add class 
-                eventSegmentsDiv.addClass('click-event');
-
-                // Append p object to div object
-                eventSegmentPDiv.append(pEventText);
-
-                // Append img and p object to div object
-                eventSegmentImgDiv.append(eventImage);
-                eventSegmentImgDiv.append(pEventSegment);
-
-                // Append Segments
-                eventSegmentsDiv.append(eventSegmentImgDiv);
-                eventSegmentsDiv.append(eventSegmentPDiv);
-                eventColDiv.append(eventSegmentsDiv);
-
-                // Add to page
-                $('.event-list').append(eventColDiv);
-                
+            	// Show custom error modal message
+            	$('.ui.small.modal.custom-error')
+  				.modal('show')
+				;
             }
+            
+            // If event listing is returned
+            else {
+          
+	            // Loop through object
+	            for (var j = 0; j < results.events.length; j++) {
 
+	                // Create div jquery objects
+	                var eventColDiv = $('<div class="column">');
+	                var eventSegmentsDiv = $('<div class="ui horizontal segments col-style">');
+	                var eventSegmentImgDiv = $('<div class="ui segment seg-user-style">');
+	                var eventSegmentPDiv = $('<div class="ui segment seg-user-style">');
+
+	                // Create p jquery objects
+	                var pEventText = $('<p>').text(results.events[j].name);
+	                var pEventSegment = $('<p>').text(results.events[j].classifications[0].segment.name);
+
+	                // Get image array
+	                var imgs = results.events[j].images;
+	                var eventImage;
+	                   
+	                // Loop through image array and get the image URL for ratio: 16_9, width: 640, height: 360
+	                for (var i = 0; i < imgs.length; i++) {
+	                    if ( imgs[i].ratio == "16_9" && imgs[i].width == 640 && imgs[i].height == 360 )  {
+	                    	
+	                    	// Create image jquery object
+	                    	eventImage = $('<img class="ui small image">').attr('src', imgs[i].url);
+	                    }
+	                }
+
+	                // Add data attribute
+	                eventSegmentsDiv.attr('data-eventid', results.events[j].id);
+
+	                // Add class 
+	                eventSegmentsDiv.addClass('click-event');
+
+	                // Append p object to div object
+	                eventSegmentPDiv.append(pEventText);
+
+	                // Append img and p object to div object
+	                eventSegmentImgDiv.append(eventImage);
+	                eventSegmentImgDiv.append(pEventSegment);
+
+	                // Append Segments
+	                eventSegmentsDiv.append(eventSegmentImgDiv);
+	                eventSegmentsDiv.append(eventSegmentPDiv);
+	                eventColDiv.append(eventSegmentsDiv);
+
+	                // Add to page
+	                $('.event-list').append(eventColDiv);
+	                
+	            }
+        	}
         });
 
         return false;
@@ -214,6 +225,7 @@
 	// When About button is click, open modal window
 	$(document.body).on('click','.myAboutClick', function(){
 
+		// Show custom about modal window
 		$('.ui.small.modal.custom-about')
   			.modal('show')
 		;
@@ -223,6 +235,7 @@
 	// When Team button is click, open modal window
 	$(document.body).on('click','.myTeamClick', function(){
 
+		// Show custom team modal window
 		$('.ui.small.modal.custom-team')
   			.modal('show')
 		;
@@ -232,6 +245,7 @@
 	// When Contact button is click, open modal window
 	$(document.body).on('click','.myContactClick', function(){
 
+		// Show custom contact modal window
 		$('.ui.basic.modal')
   			.modal('show')
 		;

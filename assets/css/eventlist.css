@@ -85,12 +85,17 @@ nav li a {
 	text-align: center !important;
 }
 
-.txt-sytle	{
+.txt-style	{
 	color: #800000;
 	font-size: 25px;
 }
 
-.txt-sytle2	{
+.txt-style2	{
 	color: #fff;
 	font-size: 25px;
+}
+
+.txt-style3	{
+	color: #ff0000;
+	font-size: 15px;
 }
