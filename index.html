@@ -11,10 +11,12 @@
 	<link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet" type="text/css">
 
 	<script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+	<script src="assets\js\jquery.validate.min.js"></script>
+	<script src="assets\js\additional-methods.min.js"></script>
 </head>
-<body>
-	<div class="ui secondary menu">
-        <div class="right item">
+<body background="assets/images/eventlist 1.jpg">
+	<div class="ui secondary menu" id="topBar">
+        <div class="right item" id="topBarBttns">
 	        <a class="item">HOME</a>
 	        <a class="item">ABOUT</a>
 	        <a class="item">TEAM</a>
@@ -22,14 +24,11 @@
         </div>
    	</div>
 
-   	<section id="locationSearch">
-	   	<div class="ui fluid category search" id="searchBox">
-  			<div class="ui icon input">
-    			<input class="prompt" type="text" placeholder="City or Zipcode..." id="cityZip">
-    			<i class="search icon"></i>
-  			</div>
-  			<div class="results"></div>
-		</div>
+	<section id="locationSearch">
+		<form class="ui icon input" id="searchForm">
+			<input id="zipcode" name="zipcode" type="text" placeholder="Please enter a Zipcode">
+			<i class="search icon"></i>
+		</form>
 	</section>
 
    	<section id="">
@@ -37,8 +36,6 @@
    			<div class="std-style">
    				<p>SomethingToDo</p>
    			</div>
-   			
-   			<img src="assets/images/eventlist1.jpg" width="100%" height="730em">
    		</div>
    	</section>
 

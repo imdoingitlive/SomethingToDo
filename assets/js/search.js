@@ -1,11 +1,13 @@
 $( document ).ready(function() {
 
-		$("#searchBox").on("click", function(){
-		 	// Get inputs
-		 	var location = $('#cityZip').val(); 
-				
-		 	console.log(location);
-
-			return false;
-	   	});
+	$("#searchForm").validate({
+		rules: {
+			zipcode: {
+			required: true,
+			minlength: 5,
+			maxlength: 5,
+			zipcodeUS: true
+			}
+		}
+	});
 });
