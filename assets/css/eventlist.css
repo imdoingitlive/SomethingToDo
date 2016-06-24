@@ -99,3 +99,23 @@ nav li a {
 	color: #ff0000;
 	font-size: 15px;
 }
+
+/* Stef code */
+
+#event-modal.ui.modal.transition.visible.active {
+	background-color: #ff8c00;
+}
+
+.event-detail-img {
+	width: 200px;
+	height: 100px;
+	margin: 10px 0 15px;
+}
+
+#left-column {
+	margin: 0 0 0 25px;
+}
+
+.restaurant-img {
+	margin: 0 0 15px;
+}
