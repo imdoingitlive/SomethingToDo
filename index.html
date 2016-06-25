@@ -40,7 +40,126 @@
    		</div>
    	</section>
 
+		<!-- About Modal -->
+        <div class="ui small modal custom-about">
+            <i class="close icon"></i>
+            <div class="header">
+                SomethingToDo - About
+            </div>
+            <div class="image content">
+                <div class="ui medium image">
+                    <img src="assets/images/eventimg3.jpg">
+                </div>
+                <div class="description">
+                    <p>SomethingToDo helps user to get event details for the day based on City or ZipCode.</p>
+                </div>
+            </div>
+            <div class="actions">
+                <div class="ui positive button">
+                    Ok 
+                </div>
+            </div>
+        </div>
+
+        <!-- Team Modal -->
+        <div class="ui small modal custom-team">
+            <i class="close icon"></i>
+            <div class="header">
+                SomethingToDo - The Awesome Team
+            </div>
+            <div class="image content">
+                <div class="ui medium image">
+                    <img src="assets/images/eventimg4.png">
+                </div>
+                <div class="description">
+                    <p class="txt-style">Anand Gopalakrishnan</p>
+                    <p class="txt-style">Stefanie Centi</p>
+                    <p class="txt-style">Edwin Rivera</p>
+                    <p>(Not in any particular order)</p>
+                </div>
+            </div>
+            <div class="actions">
+                <div class="ui positive button">
+                    Ok 
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Modal -->
+        <div class="ui basic modal">
+            <i class="close icon"></i>
+            <div class="header">
+                SomethingToDo - Contact
+            </div>
+            <div class="image content">
+                <div class="ui medium image">
+                    <img src="assets/images/eventimg4.png">
+                </div>
+                <div class="description">
+                    <p class="txt-style2">Rutgers Coding Bootcamp</p>
+                    <p class="txt-style2">Phone: XXX-XXX-XXXX</p>
+                    <p class="txt-style2">Email: code@rutgers.edu</p>
+                </div>
+            </div>
+            <div class="actions">
+                <div class="ui positive button">
+                    Ok 
+                </div>
+            </div>
+        </div>
+
+        <!-- Issue Modal -->
+        <div class="ui small modal custom-error">
+            <i class="close icon"></i>
+            <div class="header">SomethingToDo - Not Available</div>
+            <div class="content">
+                <p class="txt-style3">No event listing found for City or Zipcode. Please try again.</p>
+            </div>
+            <div class="actions">
+                <div class="ui positive button">
+                    Ok 
+                </div>
+            </div>
+        </div>
+
+        <!-- Stef Code  -->
+        <div class="ui modal custom-eventdtls" id="event-modal">
+            <div class="header" id="modal-header"></div>
+            <div class="ui two column grid" id="left-column">
+                <div class="column">
+                    <h4 class="ui dividing header">Event Detail</h4>
+                    <div class="content">
+                        <div class="image content" id="image-content-eventdtl">
+                        
+                        </div>
+                        <div class="venue content ui accordion">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column" id="right-column">
+                    <h4 class="ui dividing header">Nearby Restaurants</h4>
+                    <div class="content">
+                        <div class="restaurant content ui accordion">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="actions">
+                <div class="ui positive button">
+                    Ok 
+                </div>
+            </div>
+            <!-- <div class="actions" id="action-section">
+                <div class="ui cancel button">Close</div>
+            </div> -->
+        </div>
+         <!-- Stef Code Ends -->
+
    	<script src="assets/js/search.js"></script>
+   	<script src="assets/js/eventlist.js"></script> 
 
 </body>
 </html>
