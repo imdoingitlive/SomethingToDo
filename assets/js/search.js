@@ -7,8 +7,8 @@ $( document ).ready(function() {
 		rules: {
 			zipcode: {
 			required: true,
-			minlength: 2,
-			maxlength: 25,
+			minlength: 5,
+			maxlength: 5,
 			zipcodeUS: true
 			}
 		}
