@@ -17,4 +17,10 @@ $( document ).ready(function() {
 	$('#zipcode').click(function(){
    		window.location.href='eventlist.html?startDateTime=2016-06-18T00:00:00Z&postalCode=10001';
 	})
+
+	$("#zipcode").keyup(function (e) {
+    	if (e.keyCode == 13) {
+			window.location.href='eventlist.html?startDateTime=2016-06-18T00:00:00Z&postalCode=10001';
+    	}	
+	});
 });
