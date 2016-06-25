@@ -6,14 +6,41 @@
 	<title>SomethingToDo</title>
 
 	<link rel="stylesheet" type="text/css" href="assets\css\reset.css">
+    <link rel="stylesheet" type="text/css" href="assets\css\homepage.css">
 	<link rel="stylesheet" type="text/css" href="assets\semantic-ui\semantic.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet" type="text/css">
 
 	<script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
-
+	<script src="assets\js\jquery.validate.min.js"></script>
+	<script src="assets\js\additional-methods.min.js"></script>
 </head>
-<body>
+<body background="assets/images/eventlist 1.jpg">
+	<div class="ui secondary menu" id="topBar">
+        <div class="right item" id="topBarBttns">
+	        <a class="item">HOME</a>
+	        <a class="item">ABOUT</a>
+	        <a class="item">TEAM</a>
+	        <a class="item">CONTACT</a>
+        </div>
+   	</div>
 
+	<section id="locationSearch">
+		<form class="ui icon input" id="searchForm">
+			<input id="zipcode" name="zipcode" type="text" placeholder="Please enter a Zipcode">
+			<i class="search icon"></i>
+		</form>
+		<div><p class="errorClass" id="errorMsg"> </p></div>
+	</section>
 
+   	<section id="">
+	   	<div>
+   			<div class="std-style">
+   				<p>SomethingToDo</p>
+   			</div>
+   		</div>
+   	</section>
+
+   	<script src="assets/js/search.js"></script>
 
 </body>
 </html>
