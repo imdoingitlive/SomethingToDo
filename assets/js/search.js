@@ -1,7 +1,7 @@
 $( document ).ready(function() {
 
-	// var userInfo = $("#zipcode").val();
-	// console.log(unserInfo);
+	var userInfo = $("#zipcode").val();
+	console.log(unserInfo);
 
 	$("#searchForm").validate({
 		rules: {
@@ -13,4 +13,8 @@ $( document ).ready(function() {
 			}
 		}
 	});
+
+	$('#zipcode').click(function(){
+   		window.location.href='eventlist.html?startDateTime=2016-06-18T00:00:00Z&postalCode=' + userInfo;
+	})
 });
