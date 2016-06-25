@@ -1,7 +1,7 @@
 $( document ).ready(function() {
 
-	var userInfo = $("#zipcode").val();
-	console.log(unserInfo);
+	// var userInfo = $("#zipcode").val();
+	// console.log(unserInfo);
 
 	// $("#searchForm").validate({
 	// 	rules: {
