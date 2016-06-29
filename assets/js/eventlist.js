@@ -268,7 +268,7 @@
 		;
 
 		// $('.ui.modal').modal('show');
-		// $('.ui.accordion').accordion();
+		$('.ui.accordion').accordion();
 	 };
 
 	//Function to display event details
